@@ -1,0 +1,9 @@
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/BdcNexusApplication.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/config/CorsConfig.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/config/SwaggerCssFilter.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/controller/TransactionController.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/dto/ForecastResponse.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/model/SalesTransaction.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/repository/SalesTransactionRepository.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/service/AnalyticsService.java
+/Users/aashnaparikh/Documents/Projects/bdc-nexus/backend/src/main/java/com/bdcnexus/service/ForecastService.java

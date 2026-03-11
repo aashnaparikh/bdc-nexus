@@ -1,0 +1,42 @@
+-- ============================================================
+-- BDC-Nexus Seed Data - 12 months of sales transactions
+-- Provides sufficient data points for linear regression forecast
+-- ============================================================
+
+INSERT INTO sales_transactions (transaction_date, revenue, customer_segment, region) VALUES
+  ('2024-01-15', 45200.00,  'Enterprise',  'North America'),
+  ('2024-01-22', 18500.00,  'SMB',         'Europe'),
+  ('2024-01-30', 12300.00,  'Mid-Market',  'Asia Pacific'),
+  ('2024-02-10', 52300.00,  'Enterprise',  'North America'),
+  ('2024-02-18', 21000.00,  'Mid-Market',  'Asia Pacific'),
+  ('2024-02-25', 9800.00,   'SMB',         'Latin America'),
+  ('2024-03-05', 31700.00,  'SMB',         'Europe'),
+  ('2024-03-20', 61000.00,  'Enterprise',  'North America'),
+  ('2024-03-28', 14500.00,  'Mid-Market',  'Latin America'),
+  ('2024-04-12', 28400.00,  'Mid-Market',  'Latin America'),
+  ('2024-04-22', 39100.00,  'Enterprise',  'Europe'),
+  ('2024-04-30', 17200.00,  'SMB',         'Asia Pacific'),
+  ('2024-05-08', 55900.00,  'Enterprise',  'Asia Pacific'),
+  ('2024-05-16', 22600.00,  'SMB',         'Europe'),
+  ('2024-05-27', 48300.00,  'Enterprise',  'North America'),
+  ('2024-06-04', 33100.00,  'Mid-Market',  'North America'),
+  ('2024-06-14', 38200.00,  'SMB',         'Europe'),
+  ('2024-06-25', 26700.00,  'Mid-Market',  'Asia Pacific'),
+  ('2024-07-09', 67400.00,  'Enterprise',  'North America'),
+  ('2024-07-18', 29800.00,  'SMB',         'Latin America'),
+  ('2024-07-25', 72100.00,  'Enterprise',  'North America'),
+  ('2024-08-03', 41500.00,  'Mid-Market',  'Asia Pacific'),
+  ('2024-08-14', 35600.00,  'Enterprise',  'Europe'),
+  ('2024-08-28', 18900.00,  'SMB',         'Latin America'),
+  ('2024-09-05', 58200.00,  'Enterprise',  'North America'),
+  ('2024-09-17', 33600.00,  'SMB',         'Latin America'),
+  ('2024-09-26', 44100.00,  'Mid-Market',  'Europe'),
+  ('2024-10-08', 76300.00,  'Enterprise',  'North America'),
+  ('2024-10-19', 31200.00,  'SMB',         'Asia Pacific'),
+  ('2024-10-30', 52800.00,  'Enterprise',  'Europe'),
+  ('2024-11-06', 88500.00,  'Enterprise',  'North America'),
+  ('2024-11-15', 47300.00,  'Mid-Market',  'Asia Pacific'),
+  ('2024-11-27', 36900.00,  'SMB',         'Europe'),
+  ('2024-12-03', 94200.00,  'Enterprise',  'North America'),
+  ('2024-12-12', 61700.00,  'Enterprise',  'Europe'),
+  ('2024-12-20', 28400.00,  'SMB',         'Latin America');
