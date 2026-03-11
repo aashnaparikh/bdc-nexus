@@ -5,7 +5,9 @@
  * In production, the same path would be served from the same origin or a configured CDN.
  */
 
-const BASE = '/api'
+// In dev, VITE_API_URL is unset so the Vite proxy handles /api.
+// In production (Vercel), set VITE_API_URL to your Railway backend URL.
+const BASE = `${import.meta.env.VITE_API_URL ?? ''}/api`
 
 // =====================================================================
 // Transaction CRUD
