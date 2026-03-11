@@ -2,10 +2,6 @@
 
 > Full-stack enterprise analytics platform aligned with SAP Business Data Cloud (BDC)
 
-[![CI Pipeline](https://github.com/YOUR_USERNAME/bdc-nexus/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/bdc-nexus/actions)
-
----
-
 ## Overview
 
 BDC-Nexus simulates SAP-scale business data handling, focusing on **Product Quality** and **Agile Workflow**.
