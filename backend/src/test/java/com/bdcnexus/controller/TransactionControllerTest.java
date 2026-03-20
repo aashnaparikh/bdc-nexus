@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
@@ -22,6 +24,7 @@ import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -55,6 +58,16 @@ class TransactionControllerTest {
     @MockBean
     private ForecastService forecastService;
 
+    // SecurityConfig requires these beans — mock them so the web slice loads cleanly
+    @MockBean
+    private com.bdcnexus.config.JwtAuthFilter jwtAuthFilter;
+
+    @MockBean
+    private UserDetailsService userDetailsService;
+
+    @MockBean
+    private com.bdcnexus.config.JwtUtil jwtUtil;
+
     @Test
     @DisplayName("GET /api/transactions should return 200 OK with JSON content type")
     void getAllTransactions_shouldReturn200WithJsonContentType() throws Exception {
@@ -72,6 +85,7 @@ class TransactionControllerTest {
     }
 
     @Test
+    @WithMockUser
     @DisplayName("POST /api/transactions with valid body should return 201 Created")
     void createTransaction_withValidBody_shouldReturn201() throws Exception {
         SalesTransaction tx = new SalesTransaction(
@@ -83,6 +97,7 @@ class TransactionControllerTest {
         given(repository.save(any(SalesTransaction.class))).willReturn(tx);
 
         mockMvc.perform(post("/api/transactions")
+                .with(csrf())
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(tx)))
             .andExpect(status().isCreated());
